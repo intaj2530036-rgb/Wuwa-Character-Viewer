@@ -264,11 +264,6 @@ class WutheringWavesWindow(Tk):
         self.title_label=Label(f1, text="Character List", bg="Black", fg="white", font=("Arial", 20))
         self.title_label.pack(side=TOP, fill=BOTH, expand=True)
         characters=list(self.character_data.keys())
-    #     characters=["Rover","Aemeath",  "Carlotta", "Changli", "Iuno", "Augusta","Lupa", "Shorekeeper",
-    #     "Brant", "Zani", "Jiyan", "Yinlin", "Jinhsi", "Encore", "Verina", "Calcharo", "Lingyang",
-    # "Jianxin", "Mortefi", "Sanhua", "Baizhi", "Yangyang", "Chixia", "Danjin",
-    # "Taoqi", "Yuanwu", "Aalto", "Youhu", "Xiangli Yao", "Camellya", "Phoebe",
-    # "Male Rover", "Jueyuan"]
         self.listbox= Listbox(f1, bg="#0A192F", fg="#ffffff", font=("Arial", 20), height=30, width=20, )
         for character in characters:
             self.listbox.insert(END, character)
@@ -283,6 +278,7 @@ class WutheringWavesWindow(Tk):
             self.weapon_label.config(text=data["weapon"])
             self.role_label.config(text=data["role"])
             self.description_label.config(text=data["description"])
+
             #-----image from URL----
 
             self.image_label.config(text="Loading...", image="")
